@@ -1,13 +1,227 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MP1</title>
-    </head>
-    <body>
-        <h1>Hello World! Welcome to MP1!</h1>
-        <img src="assets/image.jpg">
-    </body>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Beijing WB · Honor of Kings Esports | Official Single Page</title>
+</head>
+<body>
+  <!-- Sticky Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a class="logo" href="#home" aria-label="Beijing WB"> <img src="./assets/Logo.png" alt="Beijing WB Logo" /> </a>
+      <nav class="menu" aria-label="Primary">
+        <a href="#home">Home</a>
+        <a href="#features">Players</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#video">Video</a>
+        <a href="#parallax">Honors</a>
+        <a href="#matches">Matches</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 1. Home-->
+  <section id="home" class="section hero">
+    <div class="hero-content">
+      <h1 class="fade-in">Beijing WB · Honor of Kings Esports</h1>
+      <p class="fade-in delay">Five Hearts, One Destiny — Victory Forged in Fivefold Unity.</p>
+      <a class="btn primary" href="#features">立即了解</a>
+    </div>
+  </section>
+
+  <!-- 2. Players / Features (多列布局) -->
+  <section id="features" class="section">
+    <div class="container">
+      <h2>Core Player</h2>
+        <div class="grid cards columns-5">
+        <article class="card player1">
+            <h3>Top Lane</h3>
+            <p>ZiMo</p>
+        </article>
+
+        <article class="card player2">
+            <h3>Jungle</h3>
+            <p>NuanYang</p>
+        </article>
+
+        <article class="card player3">
+            <h3>Mid Lane</h3>
+            <p>TingYue</p>
+        </article>
+
+        <article class="card player4">
+            <h3>Botton Lane</h3>
+            <p>XiaoMai</p>
+        </article>
+
+        <article class="card player5">
+            <h3>Support</h3>
+            <p>MengXi</p>
+        </article>
+        </div>
+
+    </div>
+  </section>
+
+  <!-- 3. Gallery (Carousel) -->
+  <section id="gallery" class="section">
+    <div class="container">
+      <h2>Match Photo Recap</h2>
+      <div class="carousel" data-autoplay="true">
+        <button class="nav prev" aria-label="上一张">‹</button>
+        <div class="track">
+          <img src="./assets/pic1.JPG"/>
+          <img src="./assets/pic2.PNG"/>
+          <img src="./assets/pic3.JPG"/>
+          <img src="./assets/pic4.PNG"/>
+        </div>
+        <button class="nav next" aria-label="下一张">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Video -->
+  <section id="video" class="section">
+    <div class="container">
+      <h2>Match Highlights</h2>
+      <video controls preload="metadata" poster="./assets/Logo.png" class="responsive-video">
+        <source src="./assets/matchvedio.MP4" type="video/mp4" />
+      </video>
+    </div>
+  </section>
+
+
+  <!-- 5. Parallax (honor) -->
+  <section id="parallax" class="section parallax">
+    <div class="overlay">
+      <h2>Honor Wall</h2>
+      <p>Beijing WB has reached eight grand finals in King Pro League and world events, winning two major championships—the 2020 KPL Spring Season and the 2020 Honor of Kings World Champion Cup—while earning six additional runner-up finishes.</p>
+    </div>
+  </section>
+
+
+<section id="matches" class="section matches-features">
+  <div class="container matches-features">
+    <h2 class="section-title">近期赛程</h2> 
+    <div class="grid features-3">
+        <button class="feature fixture-card"
+              data-img="./assets/match1.png"
+              data-title="Beijing WB vs Qingjiu — Sep 29 · 19:00 · Chengdu">
+        <div class="icon-circle" aria-hidden="true" title="Hot Match">
+            <svg class="ico" viewBox="0 0 24 24" role="img" focusable="false">
+                <path d="M3 9l4 3 5-6 5 6 4-3v8H3V9zm2 10h14v2H5z"/>
+            </svg>
+        </div>
+        <h3>Beijing WB vs Qingjiu</h3>
+        <p>Sep 29 · 19:00 · Chengdu</p>
+      </button>
+
+      <button class="feature fixture-card"
+              data-img="./assets/match2.png"
+              data-title="Beijing WB vs Shanghai EDG.M — Sep 30 · 14:00 · Chengdu">
+        <div class="icon-circle" aria-hidden="true" title="Hot Match">
+            <svg class="ico" viewBox="0 0 24 24" role="img" focusable="false">
+                <path d="M3 9l4 3 5-6 5 6 4-3v8H3V9zm2 10h14v2H5z"/>
+            </svg>
+        </div>
+        <h3>Beijing WB vs Shanghai EDG.M</h3>
+        <p>Sep 30 · 14:00 · Chengdu</p>
+      </button>
+
+      <button class="feature fixture-card"
+              data-img="./assets/match3.jpg"
+              data-title="Beijing WB vs KSG — Oct 3 · 17:00 · Chengdu">
+        <div class="icon-circle" aria-hidden="true" title="Hot Match">
+            <svg class="ico" viewBox="0 0 24 24" role="img" focusable="false">
+                <path d="M3 9l4 3 5-6 5 6 4-3v8H3V9zm2 10h14v2H5z"/>
+            </svg>
+        </div>
+        <h3>Beijing WB vs KSG</h3>
+        <p>Oct 3 · 17:00 · Chengdu</p>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+
+
+  <!-- 7. About -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Beijing WB</h2>
+      <p class="lead">
+Beijing WB is a professional Honor of Kings (KPL) esports team based in Beijing, China.
+The team was formerly known as TS, a squad that rapidly rose to fame by winning the 2020 KPL Spring Championship and the 2020 Honor of Kings World Champion Cup.
+In 2021, the club was officially acquired and rebranded as Beijing WB (Weibo Gaming).
+Since its rebranding, Beijing WB has remained one of the most competitive teams in the league, known for its tactical discipline, youthful roster, and thrilling playstyle.
+Combining the legacy of TS with the resources of Weibo Gaming, Beijing WB continues to strive for new championships while inspiring millions of Honor of Kings fans worldwide.</p>
+    </div>
+  </section>
+
+  <!-- 8. Contact + Modal 触发 -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact us</h2>
+      <div class="social">
+         <a class="svg-icon" href="#" aria-label="Douyin" title="Douyin" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" role="img" focusable="false">
+                <path d="M17 2a5 5 0 0 0 5 5V4a8 8 0 0 1-5-2v13a4 4 0 1 1-4-4 4 4 0 0 1 1 .1V8a7 7 0 1 0 6 7V2z"/>
+            </svg>
+        </a>
+        <a class="svg-icon" href="#" aria-label="ins" title="ins" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24">
+                <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm0 2h10c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3zm5 3.5A5.5 5.5 0 1 0 17.5 13 5.5 5.5 0 0 0 12 7.5zm0 2A3.5 3.5 0 1 1 8.5 13 3.5 3.5 0 0 1 12 9.5zm5.8-3.3a1.2 1.2 0 1 1-1.2-1.2 1.2 1.2 0 0 1 1.2 1.2z"/>
+          </svg>
+        </a>
+        <a class="svg-icon" href="#" aria-label="bilibili" title="bilibilli" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"/>
+              <path d="M10.878 1.093a4.23 4.23 0 0 1 4.031 1.305 4.225 4.225 0 0 1 .886 4.14v.001a.612.612 0 0 1-1.166-.377 3.01 3.01 0 0 0-3.495-3.873.611.611 0 1 1-.256-1.196Z"/>
+          </svg>
+        </a>
+
+
+      </div>
+      <button class="btn outline" data-open-modal>Send Message</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <small>© 2025 Beijing WB · Fan Demo Page</small>
+    </div>
+  </footer>
+
+  <!-- contact -->
+<div class="modal" id="contactModal" aria-hidden="true" role="dialog" aria-labelledby="mdl-title">
+  <div class="backdrop" data-close-modal></div>
+  <div class="dialog" role="document">
+    <button class="close" aria-label="关闭" data-close-modal>×</button>
+    <h3 id="mdl-title">给我们留言</h3>
+    <form class="form">
+      <label>姓名 <input type="text" required></label>
+      <label>Email <input type="email" required></label>
+      <label>留言 <textarea rows="4" required></textarea></label>
+      <button type="submit" class="btn primary">发送</button>
+    </form>
+  </div>
+</div>
+
+<!-- 赛程大图 Modal-->
+<div class="modal" id="fixtureModal" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="backdrop" data-close-modal></div>
+  <div class="dialog fixture-dialog" role="document">
+    <button class="close" aria-label="关闭" data-close-modal>×</button>
+    <h4 class="fixture-title"></h4>
+    <img class="fixture-img" alt="">
+  </div>
+</div>
+
+  
+
+</body>
 </html>
