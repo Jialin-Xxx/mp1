@@ -1,13 +1,20 @@
 /* Your JS here. */
-// 平滑滚动
-document.querySelectorAll('.menu a').forEach(a => {
+
+document.querySelectorAll('.menu a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     e.preventDefault();
-    const id = a.getAttribute('href');
-    const el = document.querySelector(id);
-    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const href = a.getAttribute('href');
+    const target = document.querySelector(href);
+    if (!target) return;
+
+    navLinks.forEach(x => x.classList.toggle('active', x === a));
+
+    const y = target.getBoundingClientRect().top + window.pageYOffset - navH() + 1;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+    history.pushState(null, '', href); 
   });
 });
+
 
 
 const navbar = document.getElementById('navbar');

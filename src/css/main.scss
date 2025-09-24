@@ -146,9 +146,7 @@ section[id] {
 .card.player5 { background-image: url('../assets/mengxi.png'); }
 
 
-// tips（只对 class="grid cards columns-5" 生效）===
 .cards.columns-5 {
-  /* 宽屏时 5 列，屏幕变窄时自动降列 */
   grid-template-columns: repeat(5, minmax(0, 1fr));
 
   @include respond($bp-xl) { grid-template-columns: repeat(4, 1fr); }
@@ -157,13 +155,12 @@ section[id] {
   @include respond($bp-sm) { grid-template-columns: 1fr; }
 }
 
-/* 等高布局，文字更紧凑 */
 .cards.columns-5 .card {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  min-height: 390px;      /* 卡片高度 */
-  padding: 30px;          /* 30适合更宽的布局 */
+  min-height: 390px;      
+  padding: 30px; 
 }
 
 /*h3 p*/
@@ -201,14 +198,14 @@ section[id] {
 .parallax {
   background-image: url("../assets/Cham.png");
   background-attachment: fixed;
-  background-position: top center;   /* 得从顶部对齐 */
+  background-position: top center;
   background-size: cover; 
   background-repeat: no-repeat;
 
   min-height: 60vh;
 
   position: relative;
-  display: grid;          /* 让 overlay 居中 */
+  display: grid;
   place-items: center;
 
   padding: 0;  
@@ -373,13 +370,11 @@ section[id] {
 // Footer
 .footer { padding:24px 0; border-top:1px solid #1b1f2a; color:$muted; }
 
-// ===== Animations =====
 @keyframes pop { from { transform: scale(.97); opacity:.5; } to { transform: scale(1); opacity:1; } }
 .fade-in { opacity:0; animation: fade 1s .05s forwards; }
 .fade-in.delay { animation-delay: .25s; }
 @keyframes fade { to { opacity:1; } }
 
-// ===== Responsive tweaks =====
 @include respond($bp-md) {
   .section { padding: 64px 0; }
   .navbar .menu { gap: 12px; }
