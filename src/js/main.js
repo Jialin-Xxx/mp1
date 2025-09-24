@@ -11,7 +11,6 @@ document.querySelectorAll('.menu a[href^="#"]').forEach(a => {
 
     const y = target.getBoundingClientRect().top + window.pageYOffset - navH() + 1;
     window.scrollTo({ top: y, behavior: 'smooth' });
-    history.pushState(null, '', href); 
   });
 });
 
